@@ -34,11 +34,11 @@ public class Test {
 //    Thread.sleep(10000);
 
     //第二种等待渲染的方式：最长等待十秒
-    driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+//    driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 
     //第三种等待渲染的方式：等到DOM返回渲染完成的消息
-//    new WebDriverWait(driver, 30).until((ExpectedCondition<Boolean>) wd ->
-//            ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
+    new WebDriverWait(driver, 30).until((ExpectedCondition<Boolean>) wd ->
+            ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
 
     long t2 = System.currentTimeMillis();
 
